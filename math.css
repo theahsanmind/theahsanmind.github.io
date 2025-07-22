@@ -1,0 +1,187 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(assets/fonts/Poppins-SemiBold.woff2);
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Hind Siliguri';
+    src: url(assets/fonts/HindSiliguri-SemiBold.woff2);
+    font-display: swap;
+}
+
+body {
+    background-color: #000729;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Poppins', 'Hind Siliguri';
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    margin: 30px auto;
+    width: 85%;
+    padding: 4px 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 2px solid #0066ff;
+    box-shadow: 0px 0px 30px 4px rgba(0, 102, 255, 0.25);
+}
+
+.logo-img {
+    display: block;
+    width: auto;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+.menu li {
+    font-family: 'Hind Siliguri';
+    font-size: 21px;
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+
+.nav-item {
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 2px 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+.nav-item:hover {
+    background-color: #0066ff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+    transition: 0.3s ease-in;
+}
+
+.selected {
+    background-color: #0066ff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+}
+
+.menu:hover .selected {
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+}
+
+.nav-item.math:hover {
+    background-color: #0066ff;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+    color: white;
+}
+
+/* ---------------------------- */
+
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.dropdown:hover {
+    fill: #000;
+}
+
+/* li:hover {
+    background: linear-gradient(135deg, #00EFFB, #1E66FB);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .navbar_links:hover{
+    color: #003cff;
+    transition: all 0.3s ease-in;
+} */
+
+/* Main Content */
+.main-content {
+    position: absolute;
+    top: 80px;
+    left: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 50vh;
+    text-align: left;
+}
+
+.title {
+    font-family: 'Poppins';
+    font-size: 60px;
+    letter-spacing: 1px;
+    /* background: linear-gradient(to right, #00B2FF, #267DFF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.subtitle {
+    font-family: 'Hind Siliguri';
+    font-size: 46px;
+    font-weight: 500;
+    margin-top: 0px;
+    /* background: linear-gradient(to right, #00aeff, #003cFF); */
+    background: #ffffff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Brain Image */
+
+.brain-image {
+    position: absolute;
+    top: 50%;   /* Adjust as needed */
+    right: 12%;    /* Align to the left */
+    transform: translateY(-50%); /* Centers it vertically */
+    width: 340px;  /* Adjust width as needed */
+    height: auto;   /* Maintain aspect ratio */
+}
+
+.brain-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Ensures image scales properly */
+}
+
+
+/* Progress Bar */
+
+.progress-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 15px;
+    border-radius: 0px 4px 4px 0px;
+    background: linear-gradient(to right, #00B2FF, #267DFF);
+}
