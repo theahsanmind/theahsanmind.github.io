@@ -30,15 +30,15 @@
 }
 
 body {
+  color: #ffffff;
   padding-top: 110px;
   font-family: 'Poppins', 'Hind Siliguri Medium';
   line-height: 1.7;
   background-color: #000729;
-  color: #DBDBDB;
 }
 
 .container {
-  max-width: 700px;
+  width: 650px;
   margin-left: 80px;
   margin-right: auto;
   padding: 20px;
@@ -131,10 +131,10 @@ body {
 /* Blog Post */
 
 .blog-post h3{
+  color: #808394;
   font-family: 'Hind Siliguri Regular';
   font-size: 21px;
   letter-spacing: 1.3px;
-  color: #808394;
   margin-left: 12px;
   margin-bottom: -2px;
 }
@@ -146,20 +146,23 @@ body {
 }
 
 .main-image {
+  display: block;
   border-radius: 20px;
-  width: 620px;
+  width: 100%;
   height: auto;
   border: 2px solid #0066ff;
-  margin: 20px 0px 30px 0px;
+  margin: 20px auto 30px;
   box-shadow: 0px 0px 30px 2px rgba(0, 102, 255, 0.15);
 }
 
 .blog-post p {
+  max-width: calc(100% - 10px);
+  margin: 12px auto;
+  color: #dfdfdf;
   font-family: 'Hind Siliguri Medium';
   letter-spacing: 0.3px;
   font-size: 17px;
   text-indent: 17px;
-  margin-bottom: 20px;
 }
 
 /* Footer */
