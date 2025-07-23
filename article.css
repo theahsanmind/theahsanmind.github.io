@@ -34,7 +34,7 @@ body {
   font-family: 'Poppins', 'Hind Siliguri Medium';
   line-height: 1.7;
   background-color: #000729;
-  color: #F3F3F3;
+  color: #DBDBDB;
 }
 
 .container {
@@ -157,8 +157,8 @@ body {
 .blog-post p {
   font-family: 'Hind Siliguri Medium';
   letter-spacing: 0.3px;
-  font-size: 16px;
-  text-indent: 18px;
+  font-size: 17px;
+  text-indent: 17px;
   margin-bottom: 20px;
 }
 
