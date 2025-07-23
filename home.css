@@ -16,13 +16,6 @@
     font-display: swap;
 }
 
-html {
-     visibility: hidden;
-}
-.font-loaded html {
-    visibility: visible;
-}
-
 body {
     background-color: #000729;
     color: #ffffff;
