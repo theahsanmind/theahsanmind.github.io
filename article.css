@@ -7,25 +7,25 @@
 
 @font-face {
     font-family: 'Hind Siliguri Regular';
-    src: url(HindSiliguri-Regular.ttf);
+    src: url(assets/fonts/HindSiliguri-Regular.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Medium';
-    src: url(HindSiliguri-Medium.ttf);
+    src: url(assets/fonts/HindSiliguri-Medium.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Semibold';
-    src: url(HindSiliguri-SemiBold.ttf);
+    src: url(assets/fonts/HindSiliguri-SemiBold.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(Poppins-Regular.ttf);
+    src: url(assets/fonts/Poppins-Medium.woff2);
     font-display: swap;
 }
 
