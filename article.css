@@ -7,25 +7,25 @@
 
 @font-face {
     font-family: 'Hind Siliguri Regular';
-    src: url(assets/fonts/HindSiliguri-Regular.woff2);
+    src: url(HindSiliguri-Regular.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Medium';
-    src: url(assets/fonts/HindSiliguri-Medium.woff2);
+    src: url(HindSiliguri-Medium.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Semibold';
-    src: url(assets/fonts/HindSiliguri-SemiBold.woff2);
+    src: url(HindSiliguri-SemiBold.ttf);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(assets/fonts/Poppins-Regular.woff2);
+    src: url(Poppins-Regular.ttf);
     font-display: swap;
 }
 
@@ -37,13 +37,6 @@ body {
   background-color: #000729;
 }
 
-.container {
-  width: 650px;
-  margin-left: 80px;
-  margin-right: auto;
-  padding: 20px;
-}
-
 .navbar {
     position: fixed;
     display: flex;
@@ -52,9 +45,9 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 88vw;
     height: 68px;
     margin: 30px auto;
-    width: 87%;
     padding: 4px 30px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -62,12 +55,13 @@ body {
     -webkit-backdrop-filter: blur(5px);
     border: 2px solid #0066ff;
     box-shadow: 0px 0px 30px 4px rgba(0, 102, 255, 0.25);
+    z-index: 1000;
 }
 
 .logo-img {
     display: block;
     width: auto;
-    height: 24px;
+    height: 36px;
     cursor: pointer;
 }
 
@@ -79,7 +73,7 @@ body {
 
 .menu li {
     font-family: 'Hind Siliguri Semibold';
-    font-size: 21px;
+    font-size: 1.312rem;
     cursor: pointer;
 }
 
@@ -128,21 +122,60 @@ body {
     color: white;
 }
 
+
+/* Page Layout */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 0 auto;
+  /* padding: 20px; */
+  gap: 40px;
+}
+
 /* Blog Post */
+.content {
+  flex: 10;
+  margin-top: 10px;
+}
 
 .blog-post h3{
-  color: #808394;
+  display: inline-flex;
+  align-items: center;
+  color: #c8c8c8;
   font-family: 'Hind Siliguri Regular';
-  font-size: 21px;
+  font-size: 1.25rem;
   letter-spacing: 1.3px;
-  margin-left: 12px;
-  margin-bottom: -2px;
+  margin-left: 18px;
+}
+
+h3 .icon{
+  width: 20px;
+  height: auto;
+  margin-right: 6.5px;
 }
 
 .blog-post h2 {
   font-family: 'Hind Siliguri Regular';
-  font-size: 35px;
+  font-size: 2.35rem;
   letter-spacing: 1.3px;
+  line-height: 1.2;
+  margin: 8px auto;
+}
+
+.date {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Hind Siliguri Medium';
+  font-size: 1rem;
+  color: #a8a8a8;
+  margin-left: 18px;
+}
+
+.date .icon {
+  width: 16.5px;
+  height: auto;
+  margin-right: 6.5px;
 }
 
 .main-image {
@@ -161,8 +194,42 @@ body {
   color: #dfdfdf;
   font-family: 'Hind Siliguri Medium';
   letter-spacing: 0.3px;
-  font-size: 17px;
+  font-size: 1.062rem;
   text-indent: 17px;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 3;
+  position: sticky;
+  top: 120px;
+  align-self: flex-start;
+  font-family: 'Poppins', 'Hind Siliguri Medium';
+  height: fit-content;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  background-color: #0066ff;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6.5px;
+  box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+  white-space: nowrap;
+}
+
+.tag .icon {
+  width: 14px;
+  height: auto;
+  margin-right: 5px;
 }
 
 /* Footer */
@@ -170,19 +237,6 @@ footer {
   background: #333;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
   margin-top: 40px;
-}
-
-/* Responsive 
-@media (max-width: 768px) {
-  .logo, nav {
-    float: none;
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
 }

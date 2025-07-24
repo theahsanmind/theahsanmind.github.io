@@ -25,13 +25,16 @@ body {
 
 /* Navbar */
 .navbar {
-    position: sticky;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 88%;
     height: 68px;
     margin: 30px auto;
-    width: 85%;
     padding: 4px 30px;
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -44,7 +47,7 @@ body {
 .logo-img {
     display: block;
     width: auto;
-    height: 24px;
+    height: 36px;
     cursor: pointer;
 }
 
