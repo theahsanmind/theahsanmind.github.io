@@ -299,3 +299,60 @@ footer {
   box-shadow: 0px 0px 30px 4px rgba(0, 102, 255, 0.25);
   margin-top: 80px;
 }
+
+/* Trying to make it responsive */
+@media (max-width: 600px) {
+  body {
+    padding-top: 110px;
+  }
+
+  .navbar {
+    width: 92%;
+    margin: 20px auto;
+    padding: 8px 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu li {
+    font-size: 1.1rem;
+  }
+
+  .nav-item {
+    padding: 5px 10px;
+  }
+
+  .blog-post h2 {
+    font-size: 1.75rem;
+  }
+
+  .blog-post h3 {
+    font-size: 1.1rem;
+  }
+
+  .date, .reading-time {
+    font-size: 0.9rem;
+    margin-left: 10px;
+  }
+
+  .blog-post p {
+    font-size: 1rem;
+    text-indent: 12px;
+  }
+
+  .tags, .relevant-others {
+    justify-content: center;
+  }
+
+  .relevant-contents {
+    height: 60px;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 30px 0;
+  }
+}
