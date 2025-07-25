@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,9 +8,12 @@
   <link rel="stylesheet" href="article.css"/>
   <link rel="icon" type="image/x-icon" href="assets/images/x-icon.png">
 </head>
+
 <body>
   <!-- Navbar -->
-  <nav class="navbar">
+  <div class="nav-wrapper">
+    <div class="upper-nav"></div>
+    <nav class="navbar">
         <div class="logo">
             <a href="/">
                 <img src = "assets/images/Logo.svg" class="logo-img">
@@ -27,7 +31,8 @@
                 </svg>
             </li>
         </ul>
-  </nav>
+    </nav>
+  </div>
 
   <!-- Layout -->
   <div class="page-layout">
@@ -44,6 +49,10 @@
         <span class="date">
           <img src="assets/icons/Calendar Icon.svg" class="icon" />
           ১৯ ফেব্রুয়ারি ২০২৫
+        </span>
+        <span class="reading-time">
+          <img src="assets/icons/Clock.svg" class="icon" />
+          ৪ মিনিট
         </span>
 
         <img src="assets/images/Cover Photo.webp" class="main-image"/>
@@ -86,7 +95,6 @@
       <div class="relevant-contents"></div>
       <div class="relevant-contents"></div>
     </aside>
-
   </div>
 
   <!-- Footer -->
@@ -96,24 +104,39 @@
     </div>
   </footer>
 
+  <!-- JavaScript -->
   <script>
+    //Sidebar Alignment
     window.addEventListener("load", function () {
       const mainImage = document.querySelector(".main-image");
       const sidebar = document.querySelector(".sidebar");
 
       if (mainImage && sidebar) {
-        // Get distance from top of image to the page top
         const imageTop = mainImage.getBoundingClientRect().top + window.scrollY;
-
-        // Get distance from top of page to sidebar container
         const layoutTop = sidebar.closest(".page-layout").getBoundingClientRect().top + window.scrollY;
-
-        // Set the sidebar's top margin so it aligns with image
         const offset = imageTop - layoutTop;
         sidebar.style.marginTop = `${offset}px`;
       }
     });
-  </script>
 
+    // Navbar & Sidebar Sync
+    let lastScrollY = window.scrollY;
+    const navWrapper = document.querySelector('.nav-wrapper');
+    const sidebar = document.querySelector('.sidebar');
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        navWrapper.classList.add('hide');
+        if (sidebar) sidebar.style.top = '20px';
+      } else {
+        navWrapper.classList.remove('hide');
+        if (sidebar) sidebar.style.top = '120px';
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  </script>
 </body>
 </html>

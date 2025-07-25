@@ -6,60 +6,97 @@
 }
 
 @font-face {
-    font-family: 'Poppins';
+    font-family: 'Poppins Medium';
+    src: url(assets/fonts/Poppins-Medium.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins Semibold';
     src: url(assets/fonts/Poppins-SemiBold.woff2);
     font-display: swap;
 }
+
 @font-face {
-    font-family: 'Hind Siliguri';
+    font-family: 'Hind Siliguri Medium';
+    src: url(assets/fonts/HindSiliguri-Medium.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hind Siliguri Semibold';
     src: url(assets/fonts/HindSiliguri-SemiBold.woff2);
     font-display: swap;
 }
 
 body {
-    background-color: #000729;
-    color: #ffffff;
-    margin: 0;
-    font-family: 'Poppins', 'Hind Siliguri';
+  color: #ffffff;
+  padding-top: 130px;
+  font-family: 'Poppins Semibold', 'Hind Siliguri Medium';
+  line-height: 1.7;
+  background-color: #000729;
+  overflow: hidden;
 }
 
-/* Navbar */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-wrapper.hide {
+  transform: translateY(-100%);
+}
+
 .navbar {
-    position: fixed;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 88%;
+    height: 66px;
     top: 0;
     left: 0;
     right: 0;
-    width: 88%;
-    height: 68px;
-    margin: 30px auto;
+    margin: 26px auto;
+    border: 2px solid #0066ff;
     padding: 4px 30px;
-    border-radius: 20px;
+    border-radius: 18px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 2px solid #0066ff;
     box-shadow: 0px 0px 30px 4px rgba(0, 102, 255, 0.25);
+}
+
+.upper-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-color: #000729;
 }
 
 .logo-img {
     display: block;
     width: auto;
-    height: 36px;
+    height: 34px;
     cursor: pointer;
 }
 
 .menu {
     list-style: none;
     display: flex;
-    gap: 12px;
+    gap: 7px;
 }
 
 .menu li {
-    font-family: 'Hind Siliguri';
-    font-size: 21px;
+    font-family: 'Hind Siliguri Semibold';
+    font-size: 1.3rem;
     cursor: pointer;
 }
 
@@ -68,17 +105,12 @@ body {
     align-items: center;
     gap: 6px;
 }
-.dropdown:hover {
-    fill: #000;
-}
-
-/* ---------------------------- */
 
 .nav-item {
     display: inline-block;
     color: #ffffff;
     border-radius: 8px;
-    padding: 2px 10px;
+    padding: 0 10px;
     text-decoration: none;
     transition: 0.3s ease-in;
 }
@@ -110,8 +142,6 @@ body {
     color: white;
 }
 
-/* ---------------------------- */
-
 /* Main Content */
 .main-content {
     position: absolute;
@@ -126,9 +156,9 @@ body {
 }
 
 .tagline {
-    font-family: 'Poppins';
+    font-family: 'Poppins Semibold';
     font-size: 46px;
-    font-weight: 500;
+    font-weight: normal;
     margin-top: 0px;
     background: linear-gradient(120deg, #0066ff 0%, #00aeff 50%, #0066ff 100%);
     background-clip: text;
