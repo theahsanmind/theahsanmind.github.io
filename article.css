@@ -18,6 +18,12 @@
 }
 
 @font-face {
+    font-family: 'Hind Siliguri Regular';
+    src: url(assets/fonts/HindSiliguri-Regular.woff2);
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Hind Siliguri Medium';
     src: url(assets/fonts/HindSiliguri-Medium.woff2);
     font-display: swap;
@@ -94,8 +100,9 @@ body {
 }
 
 .menu li {
+    position: relative;
     font-family: 'Hind Siliguri Semibold';
-    font-size: 1.3rem;
+    font-size: 1.32rem;
     cursor: pointer;
 }
 
@@ -141,6 +148,52 @@ body {
     color: white;
 }
 
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-icon {
+    width: 14px;
+    height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #1A203F;
+    border: 2px solid #0066ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px;
+    text-align: center;
+}
+
+.dropdown-content hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid #0066ff;
+}
+
+.dropdown-content a:hover {
+    background-color: #0066ff;
+}
+
+li:hover .dropdown-content {
+    display: block;
+}
+
 /* Page Layout */
 .page-layout {
   display: flex;
@@ -162,7 +215,7 @@ body {
   font-family: 'Hind Siliguri Semibold';
   font-weight: normal;
   font-size: 1.25rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.7px;
   margin-left: 18px;
 }
 
@@ -223,11 +276,11 @@ h3 .icon{
 
 .blog-post p {
   max-width: calc(100% - 10px);
-  margin: 12px auto;
-  color: #dfdfdf;
+  margin: 14px auto;
+  color: #e4e4e4;
   font-family: 'Hind Siliguri Medium';
-  letter-spacing: 0.3px;
-  font-size: 1.062rem;
+  letter-spacing: 0.4px;
+  font-size: 1.065rem;
   text-indent: 17px;
 }
 

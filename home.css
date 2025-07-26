@@ -35,7 +35,6 @@ body {
   font-family: 'Poppins Semibold', 'Hind Siliguri Medium';
   line-height: 1.7;
   background-color: #000729;
-  overflow: hidden;
 }
 
 .nav-wrapper {
@@ -95,15 +94,10 @@ body {
 }
 
 .menu li {
+    position: relative;
     font-family: 'Hind Siliguri Semibold';
-    font-size: 1.3rem;
+    font-size: 1.32rem;
     cursor: pointer;
-}
-
-.dropdown {
-    display: flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .nav-item {
@@ -141,6 +135,54 @@ body {
     box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
     color: white;
 }
+
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-icon {
+    width: 14px;
+    height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #1A203F;
+    border: 2px solid #0066ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px;
+    text-align: center;
+}
+
+.dropdown-content hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid #0066ff;
+}
+
+.dropdown-content a:hover {
+    background-color: #0066ff;
+}
+
+li:hover .dropdown-content {
+    display: block;
+}
+
+/* ----------------------------- */
 
 /* Main Content */
 .main-content {
