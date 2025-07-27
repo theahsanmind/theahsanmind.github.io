@@ -7,32 +7,31 @@
 
 @font-face {
     font-family: 'Poppins Medium';
-    src: url(assets/fonts/Poppins-Medium.woff2);
+    src: url(/assets/fonts/Poppins-Medium.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins Semibold';
-    src: url(assets/fonts/Poppins-SemiBold.woff2);
+    src: url(/assets/fonts/Poppins-SemiBold.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Medium';
-    src: url(assets/fonts/HindSiliguri-Medium.woff2);
+    src: url(/assets/fonts/HindSiliguri-Medium.woff2);
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Hind Siliguri Semibold';
-    src: url(assets/fonts/HindSiliguri-SemiBold.woff2);
+    src: url(/assets/fonts/HindSiliguri-SemiBold.woff2);
     font-display: swap;
 }
 
 body {
   color: #ffffff;
-  padding-top: 130px;
-  font-family: 'Poppins Semibold', 'Hind Siliguri Medium';
+  font-family: 'Poppins', 'Hind Siliguri Medium';
   line-height: 1.7;
   background-color: #000729;
 }
@@ -104,7 +103,7 @@ body {
     display: inline-block;
     color: #ffffff;
     border-radius: 8px;
-    padding: 0 10px;
+    padding: 0px 10px;
     text-decoration: none;
     transition: 0.3s ease-in;
 }
@@ -130,7 +129,7 @@ body {
     color: inherit;
 }
 
-.nav-item.home:hover {
+.nav-item.programming:hover {
     background-color: #0066ff;
     box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
     color: white;
@@ -164,7 +163,7 @@ body {
     display: block;
     text-decoration: none;
     color: #ffffff;
-    padding: 3px;
+    padding: 2px;
     text-align: center;
 }
 
@@ -197,30 +196,10 @@ li:hover .dropdown-content {
     text-align: left;
 }
 
-.tagline {
-    font-family: 'Poppins Semibold';
-    font-size: 46px;
+.subtitle {
+    font-family: 'Hind Siliguri Semibold';
+    font-size: 3rem;
     font-weight: normal;
     margin-top: 0px;
-    background: linear-gradient(120deg, #0066ff 0%, #00aeff 50%, #0066ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #0066ff;
-    width: 0;
-    animation:
-    typing 1.25s steps(28, end) forwards 0.3s,
-    blinking 1s step-end infinite 2.1s;
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-@keyframes blinking {
-    0%, 100% { border-color: transparent; }
-    50% { border-color: #0066ff; }
+    color: #e4e4e4;
 }

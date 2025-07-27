@@ -1,0 +1,210 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url(/assets/fonts/Poppins-Medium.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins Semibold';
+    src: url(/assets/fonts/Poppins-SemiBold.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hind Siliguri Medium';
+    src: url(/assets/fonts/HindSiliguri-Medium.woff2);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hind Siliguri Semibold';
+    src: url(/assets/fonts/HindSiliguri-SemiBold.woff2);
+    font-display: swap;
+}
+
+body {
+  color: #ffffff;
+  font-family: 'Poppins', 'Hind Siliguri Medium';
+  line-height: 1.7;
+  background-color: #000729;
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-wrapper.hide {
+  transform: translateY(-100%);
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
+    height: 66px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 26px auto;
+    border: 2px solid #0066ff;
+    padding: 4px 30px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px 4px rgba(0, 102, 255, 0.25);
+}
+
+.upper-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 26px;
+  background-color: #000729;
+}
+
+.logo-img {
+    display: block;
+    width: auto;
+    height: 34px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 7px;
+}
+
+.menu li {
+    position: relative;
+    font-family: 'Hind Siliguri Semibold';
+    font-size: 1.32rem;
+    cursor: pointer;
+}
+
+.nav-item {
+    display: inline-block;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 0px 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+.nav-item:hover {
+    background-color: #0066ff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+    transition: 0.3s ease-in;
+}
+
+.selected {
+    background-color: #0066ff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+}
+
+.menu:hover .selected {
+    background-color: transparent;
+    box-shadow: none;
+    color: inherit;
+}
+
+.nav-item.writings:hover {
+    background-color: #0066ff;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+    color: white;
+}
+
+.nav-item.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-icon {
+    width: 14px;
+    height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #1A203F;
+    border: 2px solid #0066ff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
+}
+
+.dropdown-content a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 2px;
+    text-align: center;
+}
+
+.dropdown-content hr {
+    margin: 0;
+    border: none;
+    border-top: 2px solid #0066ff;
+}
+
+.dropdown-content a:hover {
+    background-color: #0066ff;
+}
+
+li:hover .dropdown-content {
+    display: block;
+}
+
+/* ----------------------------- */
+
+/* Main Content */
+.main-content {
+    position: absolute;
+    top: 80px;
+    left: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 50vh;
+    text-align: left;
+}
+
+.subtitle {
+    font-family: 'Hind Siliguri Semibold';
+    font-size: 3rem;
+    font-weight: normal;
+    margin-top: 0px;
+    color: #e4e4e4;
+}
+
+a {
+    text-decoration: none;
+    color: #e4e4e4;
+}
