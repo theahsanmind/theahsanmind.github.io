@@ -17,29 +17,12 @@
                 <img src = "assets/images/Logo.svg" class="logo-img">
             </a>
         </div>
-
-        <ul class="sidebar" id="nav-menu">
-            <li onclick=hideSidebar()><img src="/assets/icons/Cross Icon.svg"></li>
-            <li><a href="/" class="nav-item home selected">হোম</a></li>
-            <li><a href="/math" class="nav-item">গণিত</a></li>
-            <li><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
-            <li><a href="/writing" class="nav-item">লেখালেখি</a></li>
-            <li class="nav-item dropdown">
-                <span>অন্যান্য</span>
-                <img src="/assets/icons/Dropdown.svg" class="dropdown-icon">
-                <ul class="dropdown-content">
-                    <li><a href="/">বই</a></li> <hr>
-                    <li><a href="/">মুভি</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <ul class="menu" id="nav-menu">
+        <ul class="menu">
             <li class="hideOnMobile"><a href="/" class="nav-item home selected">হোম</a></li>
             <li class="hideOnMobile"><a href="/math" class="nav-item">গণিত</a></li>
             <li class="hideOnMobile"><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
             <li class="hideOnMobile"><a href="/writing" class="nav-item">লেখালেখি</a></li>
-            <li class="hideOnMobile nav-item dropdown"><!--nav-item dropdown-->
+            <li class="hideOnMobile nav-item dropdown">
                 <span>অন্যান্য</span>
                 <img src="/assets/icons/Dropdown.svg" class="dropdown-icon">
                 <ul class="dropdown-content">
@@ -47,34 +30,42 @@
                     <li><a href="/">মুভি</a></li>
                 </ul>
             </li>
-            <li class="menu-button" onclick=showSidebar()><img src="/assets/icons/Hamburger Icon.svg"></li>
+            <li class="menu-button" onclick=showSidebar()><img src="/assets/icons/Menu Icon.svg" class="menu-icon"></li>
         </ul>
     </nav>
   </div>
 
-    <!-- Main Content -->
+  <nav class="sidenav">
+    <ul class="sidemenu">
+        <li onclick=hideSidebar()><img src="/assets/icons/Cross Icon.svg" class="cross-icon"></li>
+        <li><a href="/" class="nav-item home selected">হোম</a></li>
+        <li><a href="/math" class="nav-item">গণিত</a></li>
+        <li><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
+        <li><a href="/writing" class="nav-item">লেখালেখি</a></li>
+        <li class="nav-item dropdown">
+            <span>অন্যান্য</span>
+            <img src="/assets/icons/Dropdown.svg" class="dropdown-icon">
+            <ul class="dropdown-content">
+                <li><a href="/">বই</a></li> <hr>
+                <li><a href="/">মুভি</a></li>
+        </ul>
+        </li>
+    </ul>
+  </nav>
+
+    <!-- Main Content
     <div class="main-content">
         <h2 class="tagline">Thinking Towards Infinity...</h2>
-    </div>
-
-    <!--JavaScript-->
-    <!-- <script>
-        const hamburger = document.getElementById("hamburger");
-        const menu = document.getElementById("nav-menu");
-
-        hamburger.addEventListener("click", () => {
-            menu.classList.toggle("show");
-        });
-    </script> -->
+    </div> -->
 
     <script>
     function showSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'flex'
+      const sidenav = document.querySelector('.sidenav')
+      sidenav.style.display = 'flex'
     }
     function hideSidebar(){
-      const sidebar = document.querySelector('.sidebar')
-      sidebar.style.display = 'none'
+      const sidenav = document.querySelector('.sidenav')
+      sidenav.style.display = 'none'
     }
   </script>
 
