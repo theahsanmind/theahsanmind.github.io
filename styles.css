@@ -31,7 +31,7 @@
 
 body {
   color: #ffffff;
-  padding-top: 130px;
+  /* padding-top: 90px; */
   font-family: 'Poppins Semibold', 'Hind Siliguri Medium';
   line-height: 1.7;
   background-color: #000729;
@@ -52,17 +52,16 @@ body {
 }
 
 .navbar {
-    flex-wrap: wrap;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90vw;
-    height: 4.2rem;
+    height: 4rem;
     top: 0;
     left: 0;
     right: 0;
-    margin: 26px auto;
+    margin: 26px auto 0px;
     border: 2px solid #0066ff;
     padding: 4px 30px;
     border-radius: 18px;
@@ -78,11 +77,11 @@ body {
   left: 0;
   width: 100%;
   height: 26px;
-  background-color: #000729;
+  /* background-color: #000729; */
 }
 
 .logo {
-  height: 62%;
+  height: 65%;
 }
 
 .logo-img {
@@ -95,7 +94,7 @@ body {
 .menu {
     list-style: none;
     display: flex;
-    gap: 7px;
+    gap: 6px;
     order: 1;
 }
 
@@ -117,7 +116,7 @@ body {
 
 .nav-item:hover {
     background-color: #0066ff;
-    color: white;
+    color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
     transition: 0.3s ease-in;
@@ -125,7 +124,7 @@ body {
 
 .selected {
     background-color: #0066ff;
-    color: white;
+    color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
 }
@@ -139,7 +138,7 @@ body {
 .nav-item.home:hover {
     background-color: #0066ff;
     box-shadow: 0 0 10px 3px rgba(0, 102, 255, 0.25);
-    color: white;
+    color: #ffffff;
 }
 
 .nav-item.dropdown {
@@ -194,7 +193,9 @@ li:hover .dropdown-content {
 
 /* Main Content */
 .main-content {
-    position: absolute;
+    position: relative;
+    top: 90px;
+    padding-top: 60px;
     /* top: 80px; */
     /* left: 65px; */
     display: flex;
@@ -203,17 +204,73 @@ li:hover .dropdown-content {
     justify-content: center;
     /* height: 50vh; */
     text-align: left;
-    top: 9.2rem;
-    margin-left: 7%;
+    /* top: 9.2rem; */
+    /* margin-left: 7%; */
+}
+
+.graph-img {
+  /* position: relative;
+  width: 100%;
+  height: auto;
+  opacity: 40%; */
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  opacity: 30%;
+
+  mask-image: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 50%,
+    transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, 
+    transparent 0%, 
+    black 30%, 
+    black 70%, 
+    transparent 100%);
+}
+
+.circle1 {
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(0, 102, 255, 0.75);
+  filter: blur(80px);
+  z-index: -1;
+}
+
+.circle2 {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 100px;
+  height: 200px;
+  background-color: rgba(0, 102, 255, 1);
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  filter: blur(80px);
+  z-index: -1;
 }
 
 .tagline {
+    /* position: absolute;
+    top: 50px;
+    left: 50px; */
+    margin-bottom: 20px;
+    margin-left: 7%;
     font-family: 'Poppins Semibold';
-    /* font-size: 2.8rem; */
-    font-size: clamp(1.5rem, 4vw, 3rem);
     font-weight: normal;
-    margin-top: 0px;
-    background: linear-gradient(120deg, #0066ff 0%, #00aeff 50%, #0066ff 100%);
+    /* font-size: 2.8rem; */
+    line-height: 1.3;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #f6f6f6;
+    /* margin-top: 0px; */
+    /* background: linear-gradient(120deg, #0066ff 0%, #00aeff 50%, #0066ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -223,10 +280,33 @@ li:hover .dropdown-content {
     width: 0;
     animation:
     typing 1.25s steps(28, end) forwards 0.3s,
-    blinking 1s step-end infinite 2.1s;
+    blinking 1s step-end infinite 2.1s; */
+    animation: slideUpFade 0.8s ease-out forwards;
 }
 
-@keyframes typing {
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro-text {
+  /* position: absolute;
+  top: 140px;
+  left: 50px; */
+  margin-left: 7%;
+  color: #dadada;
+  font-size: 1.05rem;
+  /* letter-spacing: 0.2px; */
+  animation: slideUpFade 0.8s ease-out forwards;
+}
+
+/* @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
@@ -234,7 +314,7 @@ li:hover .dropdown-content {
 @keyframes blinking {
     0%, 100% { border-color: transparent; }
     50% { border-color: #0066ff; }
-}
+} */
 
 /*---------------------------*/
 
@@ -287,7 +367,6 @@ li:hover .dropdown-content {
   .navbar {
     height: 3.8rem;
   }
-
   .hideOnMobile{
     display: none !important;
   }
@@ -299,6 +378,7 @@ li:hover .dropdown-content {
 @media (max-width: 400px) {
   .navbar {
     height: 3.4rem;
+    padding: 4px 24px;
   }
   /* .tagline {
     font-size: 1.6rem;

@@ -20,11 +20,11 @@
             </a>
         </div>
         <ul class="menu">
-            <li><a href="/" class="nav-item">হোম</a></li>
-            <li><a href="/math" class="nav-item">গণিত</a></li>
-            <li><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
-            <li><a href="/writing" class="nav-item article selected">লেখালেখি</a></li>
-            <li class="nav-item dropdown">
+            <li class="hideOnMobile"><a href="/" class="nav-item">হোম</a></li>
+            <li class="hideOnMobile"><a href="/math" class="nav-item">গণিত</a></li>
+            <li class="hideOnMobile"><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
+            <li class="hideOnMobile"><a href="/writing" class="nav-item article selected">লেখালেখি</a></li>
+            <li class="hideOnMobile nav-item dropdown">
                 <span>অন্যান্য</span>
                 <img src="/assets/icons/Dropdown.svg" class="dropdown-icon">
                 <ul class="dropdown-content">
@@ -32,9 +32,28 @@
                     <li><a href="/">মুভি</a></li>
                 </ul>
             </li>
+            <li class="menu-button" onclick=showSidebar()><img src="/assets/icons/Menu Icon.svg" class="menu-icon"></li>
         </ul>
     </nav>
   </div>
+
+  <nav class="sidenav">
+    <ul class="sidemenu">
+        <li onclick=hideSidebar()><img src="/assets/icons/Cross Icon.svg" class="cross-icon"></li>
+        <li><a href="/" class="nav-item home selected">হোম</a></li>
+        <li><a href="/math" class="nav-item">গণিত</a></li>
+        <li><a href="/programming" class="nav-item">প্রোগ্রামিং</a></li>
+        <li><a href="/writing" class="nav-item">লেখালেখি</a></li>
+        <li class="nav-item dropdown">
+            <span>অন্যান্য</span>
+            <img src="/assets/icons/Dropdown.svg" class="dropdown-icon">
+            <ul class="dropdown-content">
+                <li><a href="/">বই</a></li> <hr>
+                <li><a href="/">মুভি</a></li>
+        </ul>
+        </li>
+    </ul>
+  </nav>
 
   <!-- Layout -->
   <div class="page-layout">
@@ -139,6 +158,16 @@
 
       lastScrollY = currentScrollY;
     });
+
+    //Sidenav related
+    function showSidebar(){
+      const sidenav = document.querySelector('.sidenav')
+      sidenav.style.display = 'flex'
+    }
+    function hideSidebar(){
+      const sidenav = document.querySelector('.sidenav')
+      sidenav.style.display = 'none'
+    }
   </script>
 </body>
 </html>
